@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYEMMPRE RICE LANG</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 120vh;
+            margin: 0;
+            background-color: #ffc3da;
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+        img {
+            max-width: 20%;
+            margin-bottom: -50px;
+           
+        }
+    
+        label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            width: 90%; /* Adjusted width for better responsiveness */
+        }
+    
+        input[type="checkbox"] {
+           margin-left: -1000px;
+        }
+    
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <h2>PILI PILI NA BABY KO NA MATAKAW HEHEHEHE</h2>
+
+    <form id="imageForm">
+        <label>
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRJsk7RD5qR_uQzbcjVTUsR3gfGGdy5BX8JwKgFQFGeNhDXIvv1" alt="image1">
+            <input type="checkbox" name="image" value="Rice">
+        </label>
+
+        <label>
+            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Crispy-Fried-Chicken_EXPS_TOHJJ22_6445_DR-_02_03_11b.jpg" alt="image2">
+            <input type="checkbox" name="image" value="Chicken">
+        </label>
+
+        <label>
+            <img src="https://www.recipetineats.com/wp-content/uploads/2023/01/Carbonara_6a.jpg?w=500&h=500&crop=1" alt="image3">
+            <input type="checkbox" name="image" value="carbonara">
+        </label>
+
+        <label>
+            <img src="https://www.allrecipes.com/thmb/iXKYAl17eIEnvhLtb4WxM7wKqTc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240376-homemade-pepperoni-pizza-Beauty-3x4-1-6ae54059c23348b3b9a703b6a3067a44.jpg" alt="image4">
+            <input type="checkbox" name="image" value="Pizza">
+        </label>
+
+        <label>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg" alt="Image5">
+            <input type="checkbox" name="image" value="Tacos">
+        </label>
+
+        <label>
+            <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/11/27/DV2907_Bacon-Cheese-Burgers-and-Chili-Cheese-Fries_s4x3.jpg.rend.hgtvcom.616.462.suffix/1543329866171.jpeg" alt="Image6">
+            <input type="checkbox" name="image" value="Burger">
+        </label>
+
+        <button type="button" onclick="processSelection()">Next</button>
+    </form>
+
+    <script>
+       
+       let selectedImagesPili = [];
+
+function processSelection() {
+    const selectedImages = Array.from(document.querySelectorAll('input[name="image"]:checked')).map(checkbox => checkbox.value);
+
+    if (selectedImages.length > 0) {
+        localStorage.setItem('selectedImagesPili', JSON.stringify(selectedImages));
+        window.location.href = "des.html";
+    } else {
+        alert("Please select at least one image.");
+    }
+}
+</script>
+</body>
+
+</html>

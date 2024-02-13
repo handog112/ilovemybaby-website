@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my hmmm</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffc3da;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Will you be my Valentine's on February 25?</h2>
+    <img src="https://media1.tenor.com/m/Jol0FFfU7C4AAAAC/bemy-valentine.gif" alt="WILL YOU BE MY">
+    <div>
+        <button onclick="answer('Yes')">Yes Syempre MAster mo ako ih</button>
+        <button onclick="answer('No')">No, ABA AYUSIN MO</button>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function goToNextPage() {
+            // Redirect to the next page of the website
+            window.location.href = "Yown.html"; // Replace "pili.html" with the URL of the next page
+        }
+
+        function answer(response) {
+            if (response === 'Yes') {
+                alert('Yes MOMMY UGH!');
+                goToNextPage();
+            } else {
+                alert('No YES LANG PWEDE AYUS!');
+            }
+        }
+    </script>
+</body>
+
+</html>

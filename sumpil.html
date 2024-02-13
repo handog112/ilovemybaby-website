@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>YUMMMERS ANG BABY KO </title>
+       <style>
+           body {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 100vh;
+               margin: 0;
+               background-color:#ffc3da; /* Light blue background color, you can adjust as needed */
+           }
+
+           h2 {
+               text-align: center;
+           }
+
+           button {
+               padding: 10px;
+               margin: 10px;
+               font-size: 16px;
+           }
+       </style>
+   </head>
+   <body>
+    <label>
+        <img src="https://media1.tenor.com/m/eKjLr_REZAcAAAAC/hehe-buoy.gif" alt="Image6">
+    
+    </label>
+       <h2>SCREENSHOTTT MOOOOOOO MAHAAAL KOOOOOOOO!!!</h2>
+       <h2>I LOVEEEEE YOUUUUUUUUUUUUUUUUUU</h2>
+       <p id="summary"></p>
+
+       <button onclick="goToNextPage()">FINALLY NA BABEEEE</button>
+
+       <script>
+         function goToNextPage() {
+            // Redirect to the next page of the website
+            window.location.href = "love.html"; // Replace "pili.html" with the URL of the next page
+        }
+        const selectedImagesPili = JSON.parse(localStorage.getItem('selectedImagesPili')) || [];
+        const selectedImagesDes = JSON.parse(localStorage.getItem('selectedImagesDes')) || [];
+        const selectedImagesLoc = JSON.parse(localStorage.getItem('selectedImagesLoc')) || [];
+    
+        // Combine all selected images
+        const allSelectedImages = [...selectedImagesPili, ...selectedImagesDes, ...selectedImagesLoc];
+    
+        // Display the summary
+        if (allSelectedImages.length > 0) {
+            document.getElementById('summary').innerText = `ABA TAKAW AH JOKEEEEEE I LOVE YOU: ${allSelectedImages.join(', ')}`;
+        } else {
+            document.getElementById('summary').innerText = 'No images selected.';
+        }
+    
+        // Clear local storage after retrieving data
+        localStorage.removeItem('selectedImagesPili');
+        localStorage.removeItem('selectedImagesDes');
+        localStorage.removeItem('selectedImagesLoc');
+    </script>
+   </body>
+</html>

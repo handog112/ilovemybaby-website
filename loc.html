@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAAAN TAYUUU MAGBOBONDING</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 120vh;
+            margin: 0;
+            background-color: #ffc3da;
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+        img {
+            max-width: 40%;
+            margin-bottom: -50px;
+           
+        }
+    
+        label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            width: 90%; /* Adjusted width for better responsiveness */
+        }
+    
+        input[type="checkbox"] {
+           margin-left: -2500px;
+        }
+    
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <h2>SAAAAN TAYUUUUUU MAHAAAL KO </h2>
+
+    <form id="imageForm">
+        <label>
+            <img src="https://cdn.britannica.com/99/163599-159-38EB382F/Shopping-mall-Prague.jpg" alt="image1">
+            <input type="checkbox" name="image" value="MALL">
+        </label>
+
+        <label>
+            <img src="https://cdn.sanity.io/images/jsdrzfkj/production-enph/40b9e84d1039f6ac4bbd649713ec79f49da6f7bc-1200x800.jpg" alt="image2">
+            <input type="checkbox" name="image" value="PICNIC">
+        </label>
+
+        <label>
+            <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/home-decor-advice/design-and-style/nine-small-house-interior-design-hacks/two-seater-couches-and-wall-mounts-design-hack.jpg" alt="image3">
+            <input type="checkbox" name="image" value="BIBILI AKO CONDOM">
+        </label>
+
+        <label>
+            <img src="https://www.rappler.com/tachyon/r3-assets/2A4A1962EA314F50A862E81BA50EE65B/img/E938C7E667D54D14950E5E756C5D967F/3.jpg" alt="image4">
+            <input type="checkbox" name="image" value="Yung Gusto ko puntahan sa cavite">
+        </label>
+
+        <label>
+            <img src="https://images.trvl-media.com/hotels/10000000/9990000/9980800/9980715/3b6e14a5_z.jpg" alt="Image5">
+            <input type="checkbox" name="image" value="SOGO!!">
+        </label>
+
+        <label>
+            <img src="https://www.thespruce.com/thmb/ilhEy20ji-A2Ymp5a31GhNGjz7o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Familyswimmingpool-GettyImages-155377305-599caa23d088c00010862071.jpg" alt="Image6">
+            <input type="checkbox" name="image" value="Swimming">
+        </label>
+
+        <button type="button" onclick="processSelection()">Next</button>
+    </form>
+
+    <script>
+        let selectedImagesLoc = [];
+
+function processSelection() {
+    const selectedImages = Array.from(document.querySelectorAll('input[name="image"]:checked')).map(checkbox => checkbox.value);
+
+    if (selectedImages.length > 0) {
+        localStorage.setItem('selectedImagesLoc', JSON.stringify(selectedImages));
+        window.location.href = "sumpil.html";
+    } else {
+        alert("Please select at least one image.");
+    }
+}
+    </script>
+</body>
+
+</html>
